@@ -9,5 +9,34 @@
         android:id="@+id/homeFragment"
         android:name="com.example.and_per.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_basicPermissionsFragment"
+            app:destination="@id/basicPermissionsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_singlePermissionFragment"
+            app:destination="@id/singlePermissionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_multiPermissionFragment"
+            app:destination="@id/multiPermissionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/basicPermissionsFragment"
+        android:name="com.example.and_per.permissions.basicpermission.BasicPermissionsFragment"
+        android:label="fragment_basic_permissions"
+        tools:layout="@layout/fragment_basic_permissions" />
+
+    <fragment
+        android:id="@+id/multiPermissionFragment"
+        android:name="com.example.and_per.permissions.multi.MultiPermissionFragment"
+        android:label="fragment_multi_permission"
+        tools:layout="@layout/fragment_multi_permission" />
+
+    <fragment
+        android:id="@+id/singlePermissionFragment"
+        android:name="com.example.and_per.permissions.single.SinglePermissionFragment"
+        android:label="fragment_single_permission"
+        tools:layout="@layout/fragment_single_permission" />
+
 </navigation>
