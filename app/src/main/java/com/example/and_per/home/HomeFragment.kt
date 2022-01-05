@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.and_per.databinding.FragmentHomeBinding
 
@@ -21,6 +20,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
@@ -34,17 +34,23 @@ class HomeFragment : Fragment() {
     }
 
     private fun clickListeners() {
-        binding.btnBasicPer.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToBasicPermissionsFragment()
-            findNavController().navigate(action)
-        }
-        binding.btnSinglePer.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToSinglePermissionFragment()
-            findNavController().navigate(action)
-        }
-        binding.btnMultiPer.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToMultiPermissionFragment()
-            findNavController().navigate(action)
+        binding.apply {
+            btnBasicPer.setOnClickListener {
+                val action = HomeFragmentDirections.actionHomeFragmentToBasicPermissionsFragment()
+                findNavController().navigate(action)
+            }
+            btnSinglePer.setOnClickListener {
+                val action = HomeFragmentDirections.actionHomeFragmentToSinglePermissionFragment()
+                findNavController().navigate(action)
+            }
+            btnMultiPer.setOnClickListener {
+                val action = HomeFragmentDirections.actionHomeFragmentToMultiPermissionFragment()
+                findNavController().navigate(action)
+            }
+            btnLocationPer.setOnClickListener {
+                val action = HomeFragmentDirections.actionHomeFragmentToLocationFragment()
+                findNavController().navigate(action)
+            }
         }
     }
 

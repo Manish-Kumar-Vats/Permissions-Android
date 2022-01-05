@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_multiPermissionFragment"
             app:destination="@id/multiPermissionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_locationFragment"
+            app:destination="@id/locationFragment" />
     </fragment>
 
     <fragment
@@ -38,5 +41,11 @@
         android:name="com.example.and_per.permissions.single.SinglePermissionFragment"
         android:label="fragment_single_permission"
         tools:layout="@layout/fragment_single_permission" />
+
+    <fragment
+        android:id="@+id/locationFragment"
+        android:name="com.example.and_per.permissions.bothlocation.LocationFragment"
+        android:label="LocationFragment"
+        tools:layout="@layout/fragment_location" />
 
 </navigation>

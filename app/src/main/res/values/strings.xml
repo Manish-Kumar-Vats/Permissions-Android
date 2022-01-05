@@ -8,4 +8,5 @@
     <string name="basic_per_text">The basic permissions like INTERNET_PERMISSIONS are already allowed to android app on Install time as they are basic permissions</string>
     <string name="back">Back</string>
     <string name="request_permission">Request Permission</string>
+    <string name="both_frgnd_bg_location">Foreground &amp; bg Location</string>
 </resources>

@@ -97,7 +97,6 @@ class MultiPermissionFragment : Fragment() {
                     WRITE_EXTERNAL_STORAGE,
                     READ_EXTERNAL_STORAGE,
                     ACCESS_FINE_LOCATION,
-                    ACCESS_BACKGROUND_LOCATION,
                 )
             )
         }
